@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AllApp.Models;
+using Microsoft.EntityFrameworkCore;
      
 
 namespace AllApp.Data
@@ -9,5 +10,8 @@ namespace AllApp.Data
         {
 
         }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }
