@@ -3,6 +3,7 @@ using AllApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AllApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230717232929_SeedImageTable2")]
+    partial class SeedImageTable2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,13 +49,6 @@ namespace AllApp.Migrations
                     b.ToTable("Images");
 
                     b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "C:/Images",
-                            Description = "Test_Description1",
-                            Name = "Test_Image"
-                        },
                         new
                         {
                             Id = 2,
