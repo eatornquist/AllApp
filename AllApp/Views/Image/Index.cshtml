@@ -1,1 +1,28 @@
-﻿<h1>Images List</h1>
+﻿@model List<Image>
+
+<h1>Images List</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>
+            Image Name
+        </th>
+        <th>
+            Image Description
+        </th>
+        <th>
+            Image Address
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach(var img in Model.OrderBy(u=>u.Id))
+        {
+        <tr>
+            <td>@img.Name</td>
+            <td>@img.Description</td>
+            <td>@img.Address</td>
+        </tr>
+        }
+    </tbody>
+</table>

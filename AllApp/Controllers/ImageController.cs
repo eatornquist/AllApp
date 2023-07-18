@@ -16,7 +16,7 @@ namespace AllApp.Controllers
         public IActionResult Index()
         {
             List<Image> objImageList = _db.Images.ToList();
-            return View();
+            return View(objImageList);
         }
     }
 }
